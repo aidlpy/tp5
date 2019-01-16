@@ -1,55 +1,120 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
+    <title>Bootstrap 实例</title>
     <meta charset="utf-8">
-    <title>使用Bootstrap 版本 2.0 固定布局的实例</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Example of Fluid Layout with Bootstrap version 2.0 from w3cschool.cc">
-    <meta name="author" content="">
-    <!-- Le styles -->
-    <link href="__public__./static/css/bootstrap.css" rel="stylesheet">
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!-- Le fav and touch icons -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
-
-
 <body>
-<h1>你好，世界！</h1>
 
-<div class="jumbotron">
-    <h1>Hello, world!</h1>
-    <p>...</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+        <!-- 指示符 -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- 轮播图片 -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://static.runoob.com/images/mix/img_fjords_wide.jpg" width="100%" height="200px">
+            </div>
+            <div class="carousel-item">
+                <img src="https://static.runoob.com/images/mix/img_nature_wide.jpg" width="100%" height="200px">
+            </div>
+            <div class="carousel-item">
+                <img src="https://static.runoob.com/images/mix/img_mountains_wide.jpg" width="100%" height="200px">
+            </div>
+        </div>
 </div>
 
-<form>
-    <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputFile">File input</label>
-        <input type="file" id="exampleInputFile">
-        <p class="help-block">Example block-level help text here.</p>
-    </div>
-    <div class="checkbox">
-        <label>
-            <input type="checkbox"> Check me out
-        </label>
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-</form>
+<abbr>
+<div class="container">
 
-<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
-<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <div class="row">
+        <div class="topGap"></div>
+        <div class="col-sm-4">
+            <div class="golf">
+                <div class="photo"><img src="http://static.runoob.com/images/mix/cinqueterre.jpg" width="100" height="100"></div>
+                <div class="intro">
+                    <label>高尔夫球运动是一项健康、绿色、快乐、回归自然的体育运动</label>
+                </div>
+            </div>
+        </div>
+        <div class="gap"></div>
+
+    </div>
+
+    <div class="row">
+        <div class="topGap"></div>
+        <div class="col-sm-4">
+            <div class="golf">
+                <div class="photo"><img src="http://static.runoob.com/images/mix/cinqueterre.jpg" width="100" height="100"></div>
+                <div class="intro">
+                    <p>高尔夫球运动是一项健康、绿色、快乐、回归自然的体育运动</p>
+                </div>
+            </div>
+        </div>
+        <div class="gap"></div>
+
+    </div>
+
+    <div class="row">
+        <div class="topGap"></div>
+        <div class="col-sm-4">
+            <div class="golf">
+                <div class="photo"><img src="http://static.runoob.com/images/mix/cinqueterre.jpg" width="100" height="100"></div>
+                <div class="intro">
+                    <p>高尔夫球运动是一项健康、绿色、快乐、回归自然的体育运动</p>
+                </div>
+            </div>
+        </div>
+        <div class="gap"></div>
+    </div>
+
+    <div class="row">
+        <div class="topGap"></div>
+        <div class="col-sm-4">
+            <div class="golf">
+                <div class="photo"><img src="http://static.runoob.com/images/mix/cinqueterre.jpg" width="100" height="100"></div>
+                <div class="intro">
+                    <p>高尔夫球运动是一项健康、绿色、快乐、回归自然的体育运动</p>
+                </div>
+            </div>
+        </div>
+        <div class="gap"></div>
+    </div>
+
 </body>
+
+
+
+<style>
+    .photo{
+        float:left;
+        width:20%;
+    }
+    .intro {
+        float: right;
+        width: 60%;
+    }
+    .gap{
+        color: #5a6268;
+        height: 20px;
+        width: 100%;
+    }
+    .topGap{
+        color: #9fcdff;
+        height: 20px;
+        width: 100%;
+    }
+</style>
+
 </html>

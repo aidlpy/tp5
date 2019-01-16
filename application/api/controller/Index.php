@@ -9,8 +9,9 @@
 namespace app\api\controller;
 use app\api\model\User;
 use app\api\common\Base;
+use think\Config;
 use think\Model;
-use think\Request;
+
 
 
 
@@ -24,8 +25,10 @@ class Index extends Base
 
     public  function index()
     {
-        $test = $this->request->request('test');
-   		return $this->successReturn(['test'=>$test]);
+
+//        $test = $this->request->request('test');
+//   		return $this->successReturn(['test'=>$test]);
+         return dump(Config());
     }
 
     //获取
@@ -71,6 +74,7 @@ class Index extends Base
     //查询表内所有数据
     public function fetchAll(){
 
+        Config::set('default_return_type','json');
         $list = model('User')->fetchall();
         return $this->successReturn($list);
     }

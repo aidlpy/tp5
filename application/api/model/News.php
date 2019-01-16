@@ -2,14 +2,13 @@
 /**
  * Created by PhpStorm.
  * User: zhangxinrong
- * Date: 2019/1/5
- * Time: 3:27 PM
+ * Date: 2019/1/16
+ * Time: 4:51 PM
  */
 namespace app\api\model;
-use think\Db;
 use \think\Model;
 
-Class User extends Model
+Class News extends Model
 {
 //    //自定义初始化
 //    protected function initialize()
@@ -22,7 +21,7 @@ Class User extends Model
 
     public function fetchAll(){
         $list = $this->all();
-       // $a = json_decode(json_encode($list),true);
+        // $a = json_decode(json_encode($list),true);
         return $list;
     }
 }
