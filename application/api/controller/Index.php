@@ -10,10 +10,6 @@ namespace app\api\controller;
 use app\api\model\User;
 use app\api\common\Base;
 use think\Config;
-use think\Model;
-
-
-
 
 class Index extends Base
 {
@@ -26,8 +22,8 @@ class Index extends Base
     public  function index()
     {
 
-//        $test = $this->request->request('test');
-//   		return $this->successReturn(['test'=>$test]);
+//       $test = $this->request->request('test');
+//       return $this->successReturn(['test'=>$test]);
          return dump(Config());
     }
 
@@ -53,28 +49,28 @@ class Index extends Base
         $password = $this->request->request('password');
         $user = new User();
         $user->username = '';
-        $user->password = $password;
+        $user->password = md5($password);
         $user->phone = $phone;
+        $user->token = $this->getTokenString();
         $user->save();
-        return $this->successReturn(['userid'=>$user->userid]);
-
+        return $this->successReturn(['userid'=>$user->userid,'token'=>$user->token]);
     }
+
 
     //修改
     public function update()
     {
-        $name = $this->request->request('username');
-        $user = User::get(1);
-        $user->username = $name;
-        $user->save();
-        return $this->successReturn($user);
+        $name =$this->request->request('username');
+        $token = $this->request->request('token');
+        $info = $this->check($token);
 
+        return json($info);
     }
 
     //查询表内所有数据
     public function fetchAll(){
 
-        Config::set('default_return_type','json');
+
         $list = model('User')->fetchall();
         return $this->successReturn($list);
     }

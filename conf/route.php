@@ -13,5 +13,7 @@ return [
   	'getuserinfo'        => 'api/Index/fetchUserInfo',//获取用户信息
     'register'           => 'api/Index/register',//用户注册
     'update'             => 'api/Index/update', //用户更新
-    'all'                => 'api/Index/fetchAll'//获取所有的
+    'all'                => 'api/Index/fetchAll',//获取所有的
+
+    "fetchNewsall"       => 'api/News/fetchNewslist'//获取新闻
 ];

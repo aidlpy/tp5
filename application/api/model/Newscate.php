@@ -2,14 +2,13 @@
 /**
  * Created by PhpStorm.
  * User: zhangxinrong
- * Date: 2019/1/5
- * Time: 3:27 PM
+ * Date: 2019/1/17
+ * Time: 11:52 PM
  */
 namespace app\api\model;
-use think\Db;
 use \think\Model;
 
-Class User extends Model
+Class Newscate extends Model
 {
 //    //自定义初始化
 //    protected function initialize()

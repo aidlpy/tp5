@@ -21,7 +21,6 @@ Class News extends Model
 
     public function fetchAll(){
         $list = $this->all();
-        // $a = json_decode(json_encode($list),true);
         return $list;
     }
 }

@@ -1,6 +1,7 @@
 <?php
 return [
     'default_return_type'   =>  'json',
+    'exception_handle'      => '\\app\\api\\lib\\exception\\ExceptionHandler',
     'database'              => [
         'type'            => 'mysql',
         'hostname'        => 'localhost',
